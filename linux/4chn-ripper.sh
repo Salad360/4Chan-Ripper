@@ -22,10 +22,10 @@ echo "Enter path to save content (default is $PWD)"
 read P
 if [ "$P" = "" ]
 then
-	wget -nd -r l 1 -H -D i.4cdn.org -A $TYPE $URL
+	wget -nd -r -l 1 -H -D i.4cdn.org -A $TYPE $URL
 # i.4cdn.org seems to host files uploaded by anons to 4chan
 else
-	wget -nd -P $P -r l 1 -H -D i.4cdn.org -A $TYPE $URL
+	wget -nd -P $P -r -l 1 -H -D i.4cdn.org -A $TYPE $URL
 fi
 if [ "$P" = "" ]
 then
